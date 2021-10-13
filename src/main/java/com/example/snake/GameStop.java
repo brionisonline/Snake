@@ -27,15 +27,15 @@ public class GameStop {
 
         gameOverContext.setFill(Color.web("#254F43"));
         gameOverContext.setFont(new Font("", 130));
-        gameOverContext.fillText("PRESS SPACE", 115, 350);
+        gameOverContext.fillText("PRESS SPACE", 50, 350);
 
         gameOverContext.setFill(Color.web("#254F43"));
         gameOverContext.setFont(new Font("", 137));
-        gameOverContext.fillText("TO START", 200, 485);
+        gameOverContext.fillText("TO START", 145, 485);
 
         gameOverContext.setFill(Color.web("#254F43"));
         gameOverContext.setFont(new Font("", 50));
-        gameOverContext.fillText("W,A,S,D TO MOVE", 300, 735);
+        gameOverContext.fillText("W,A,S,D TO MOVE", 270, 735);
 
         snake.removeAll(snake);
         frame.stop();
