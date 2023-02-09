@@ -60,16 +60,16 @@ public class Game {
     private void drawPressSpaceText() {
         titleContext.setFill(Color.web("#254F43"));
         titleContext.setFont(new Font("", 130));
-        titleContext.fillText("PRESS SPACE", 50, 350);
+        titleContext.fillText("PRESS SPACE", 105, 350);
 
         titleContext.setFill(Color.web("#254F43"));
         titleContext.setFont(new Font("", 137));
-        titleContext.fillText("TO START", 145, 485);
+        titleContext.fillText("TO START", 200, 485);
     }
 
     private void drawMoveText() {
         titleContext.setFill(Color.web("#254F43"));
         titleContext.setFont(new Font("", 50));
-        titleContext.fillText("W,A,S,D TO MOVE", 270, 735);
+        titleContext.fillText("W,A,S,D TO MOVE", 310, 735);
     }
 }

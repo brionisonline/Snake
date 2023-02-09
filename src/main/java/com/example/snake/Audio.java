@@ -4,9 +4,9 @@ import javafx.scene.media.AudioClip;
 
 public class Audio {
     final AudioClip eatAudio = new AudioClip(Audio.class.getResource("/eat.wav").toString());
-    final AudioClip gameAudio = new AudioClip(Audio.class.getResource("/game.wav").toString());
+    final static AudioClip gameAudio = new AudioClip(Audio.class.getResource("/game.wav").toString());
 
-    public void playGameAudio() {
+    public static void playGameAudio() {
         gameAudio.setVolume(0.5);
         gameAudio.play();
     }

@@ -12,6 +12,10 @@ public class Frame extends AnimationTimer {
     long lastUpdate = 0;
     public void frameUpdate(GraphicsContext graphicsContext) {
 
+
+        if (!Audio.gameAudio.isPlaying()) {
+            Audio.playGameAudio();
+        }
         if (SnakeGame.isGameOver) {
             new Game().title();
             return;

@@ -31,7 +31,7 @@ public class SnakeGame extends Application {
     @Override
     public void start(Stage primaryStage) {
         Score.importScore();
-
+        Audio.playGameAudio();
         frame = new Frame();
         snake = new ArrayList<>();
         root = new Pane();
@@ -49,7 +49,6 @@ public class SnakeGame extends Application {
         frame.start();
 
         new Game().title();
-        new Audio().playGameAudio();
     }
 
 }
