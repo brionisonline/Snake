@@ -2,7 +2,7 @@ module com.example.snake {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.web;
-
+    requires transitive javafx.graphics;
     requires org.controlsfx.controls;
     requires com.dlsc.formsfx;
     requires validatorfx;

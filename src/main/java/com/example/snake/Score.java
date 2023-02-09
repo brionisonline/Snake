@@ -9,29 +9,18 @@ public class Score {
     public static int score;
     public static int highScore;
 
-    private static Scanner x;
-    private static Formatter y;
     public static void importScore(){
-        try{
-            x = new Scanner(new File("scores.txt"));
-            while(x.hasNext()){
-                highScore = x.nextInt();
-            }
+        try(Scanner x = new Scanner(new File("scores.txt"))) {
+            highScore = x.nextInt();
+        } catch(FileNotFoundException e) {
+            System.out.println("Error opening file.");
         }
-        catch(FileNotFoundException e){
-
-        }
-
     }
     public static void exportScore(){
-        try{
-            y = new Formatter("scores.txt");
-            y.format(String.valueOf(highScore));
-            y.close();
-        }
-        catch(FileNotFoundException e){
-
+        try(Formatter y = new Formatter("scores.txt")) {
+            y.format("%d", highScore);
+        } catch(FileNotFoundException e) {
+            System.out.println("Error opening file.");
         }
     }
-
 }
