@@ -7,14 +7,15 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class SnakeGame extends Application {
 
-    public static final int WIDTH = 1000;
-    public static final int HEIGHT = 750;
+    public static final int WIDTH = 1200;
+    public static final int HEIGHT = 800;
     public static final Canvas PLAY_CANVAS = new Canvas(WIDTH, HEIGHT);
 
     public static Frame frame;
@@ -36,6 +37,7 @@ public class SnakeGame extends Application {
         snake = new ArrayList<>();
         root = new Pane();
         Scene scene = new Scene(root, WIDTH, HEIGHT);
+
         isGameOver = false;
         graphicsContext = PLAY_CANVAS.getGraphicsContext2D();
         
@@ -45,10 +47,12 @@ public class SnakeGame extends Application {
         primaryStage.setResizable(false);
         primaryStage.setScene(scene);
         primaryStage.setTitle("Snake");
+        primaryStage.initStyle(StageStyle.UNDECORATED);
+        primaryStage.setFullScreen(true);
         primaryStage.show();
         frame.start();
 
-        new Game().title();
+        new UIElements().title();
     }
 
 }

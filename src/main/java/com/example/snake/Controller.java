@@ -31,6 +31,9 @@ public class Controller {
         if (SnakeGame.isGameOver && key.getCode() == KeyCode.SPACE) {
             new Game().restart();
         }
+        if (key.getCode() == KeyCode.ESCAPE) {
+            System.exit(0);
+        }
     }
 
     private boolean isValidDirection(Direction newDirection) {
@@ -64,7 +67,7 @@ public class Controller {
                 break;
             case down:
                 SnakeGame.snake.get(0).yPosition++;
-                if (SnakeGame.snake.get(0).yPosition > 29) {
+                if (SnakeGame.snake.get(0).yPosition > 31) {
                     SnakeGame.isGameOver = true;
                 }
                 break;
@@ -76,7 +79,7 @@ public class Controller {
                 break;
             case right:
                 SnakeGame.snake.get(0).xPosition++;
-                if (SnakeGame.snake.get(0).xPosition > 39) {
+                if (SnakeGame.snake.get(0).xPosition > 47) {
                     SnakeGame.isGameOver = true;
                 }
                 break;
